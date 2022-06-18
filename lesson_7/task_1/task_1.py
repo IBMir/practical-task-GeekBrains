@@ -5,7 +5,7 @@ def checking_and_creating(pat):
     if not os.path.exists(pat):
          os.mkdir(pat)
 
-path = r'C:\PyCharm projects\practical_task_GeekBrains\lesson_7\task_1'
+path = r'C:\PyCharm_poyects\practical_task_GeekBrains\lesson_7\task_1'  # Укажите свой путь
 project = 'my_project'
 folders = \
     ['settings',
