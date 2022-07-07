@@ -1,18 +1,18 @@
-import re
+import time
 
 
-def email_parse(email):
-    dictionary = {'username': None, 'domain': None}
-    try:
-        email = re.findall(r'^(\w+)@(\w+\.\w{2}$)', email)[0]
-    except IndexError as i:
-        return f'''raise ValueError(msg)
-ValueError: wrong email: {email}'''
-    dictionary['username'] = email[0]
-    dictionary['domain'] = email[1]
-    return dictionary
+class TrafficLight:
+    __color = ['красный', 'жёлтый', 'зелёный']
 
+    def running(self):
+        while True:
+            print(TrafficLight.__color[0])
+            time.sleep(7)
+            print(TrafficLight.__color[1])
+            time.sleep(7)
+            print(TrafficLight.__color[2])
+            time.sleep(4)
 
 if __name__ == '__main__':
-    email = input('Введите ваш email адрес: ')
-    print(email_parse(email))
+    test = TrafficLight()
+    test.running()
